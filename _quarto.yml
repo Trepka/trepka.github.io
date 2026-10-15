@@ -1,0 +1,19 @@
+project:
+  type: website
+
+website:
+  title: "Data Analysis Journey"
+  navbar:
+    left:
+      - href: index.md
+        text: Home
+      - href: sql.md
+        text: SQL
+      - href: pandas.md
+        text: Pandas
+
+format:
+  html:
+    theme: cosmo  # 'cosmo' is a very clean, minimalist theme
+    toc: true     # Adds a Table of Contents on the right side of long pages
+    code-copy: true # Adds a "copy to clipboard" button to code blocks
