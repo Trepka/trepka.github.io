@@ -12,5 +12,3 @@ title: "Data journey"
 ---
 
 ### 🚀 Цели
-1. Master SQL Window Functions.
-2. Build an end-to-end EDA project using Pandas and Plotly.
