@@ -1,16 +1,16 @@
 ---
-title: "Welcome to My Data Notes"
+title: "Data journey"
 ---
 
-Welcome to my data analysis documentation! This site serves as my personal knowledge base and portfolio as I learn and grow in data analytics.
+Этот сайт - мой собственный путь с нуля до аналитика данных.
 
-## 📚 Table of Contents
+## 📚 Оглавление
 
-- **[SQL](sql.md)**: My notes on querying, joins, and window functions.
-- **[Pandas](pandas.md)**: Data manipulation, cleaning, and analysis in Python.
+- **[SQL](sql.md)**: Реляционные базы данных на примере PostgreSQL.
+- **[Pandas](pandas.md)**: Очистка, преобразование и анализ данных с помощью Pandas.
 
 ---
 
-### 🚀 Current Goals
+### 🚀 Цели
 1. Master SQL Window Functions.
 2. Build an end-to-end EDA project using Pandas and Plotly.
