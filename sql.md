@@ -1,21 +1,37 @@
 ---
-title: "SQL Notes"
+title: "Реляционные базы данных"
 ---
 
 # SQL Cheatsheet & Notes
 
-This page contains my favorite SQL patterns and queries.
+На этой странице опубликована необходимая база по БД с примерами кода.
 
-## 1. The CASE Statement
-Use `CASE` to create custom categories on the fly.
 
+#### Базовые запросы
+1. сортировка результата нисходящая/восходящая
+2. функции (LENGTH, UPPER, SPLIT_PART, приведение типов CAST, CONCAT, DATE_PART, ROUND)
+3. типы данных DATE, TIMESTAMP
+4. COALESCE
+5. конструкция CASE - WHEN
+
+#### Фильтрация данных
+1. WHERE, LIKE/NOT LIKE
+2. фильтрация по числовым/текстовым значениям, датам
+3. IN/NOT IN, BETWEEN/NOT BETWEEN
+4. IS NULL/ IS NOT NULL
+
+#### Агрегация
+1. DISTINCT (сочетание с агрегирующими функциями)
+2. COUNT (в случае колонки возвращает количество НЕ NULL значений), SUM, AVG, MAX, MIN
+3. array_length(массив, размерность)
+4. в качестве аргумента агрегирующей функции могут быть другие функции либо расчетные колонки (Н-р: AVG(column1 + column2), либо условие CASE)
+5. AGE
+6. агрегатные выражения с фильтрацией (такая запись позволяет проводить расчеты без промежуточных запросов с условиями в блоке WHERE)
 ```sql
-SELECT 
-    employee_id,
-    salary,
-    CASE 
-        WHEN salary > 100000 THEN 'High Earner'
-        WHEN salary BETWEEN 50000 AND 100000 THEN 'Mid Earner'
-        ELSE 'Entry Level'
-    END AS salary_category
-FROM employees;
+SELECT agg_function(column) FILTER (WHERE condition)
+FROM table
+```
+
+#### Группировка данных
+1. GROUP BY
+2. 
