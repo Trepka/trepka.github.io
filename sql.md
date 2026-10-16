@@ -8,9 +8,28 @@ title: "Реляционные базы данных"
 Логические блоки этой страницы будут продублированы на странице pandas, для лучшего усвоения. \
 Для практики написания запросов я использовал этот [репозиторий](https://github.com/lorint/AdventureWorks-for-Postgres). 
 
+#### Порядок выполнения запроса
+
 #### Базовые запросы
-1. сортировка результата нисходящая/восходящая
-2. функции (LENGTH, UPPER, SPLIT_PART, приведение типов CAST, CONCAT, DATE_PART, ROUND)
+1. Cортировка результата нисходящая/восходящая
+```sql
+SELECT col
+FROM t
+ORDER BY col ASC --DESC
+```
+2. Функции (LENGTH, UPPER, SPLIT_PART, приведение типов CAST, CONCAT, DATE_PART, ROUND)
+```sql
+SELECT LENGTH('simple text') -- вернет 11
+---
+SELECT UPPER('text') -- вернет TEXT
+---
+SELECT SPLIT_PART(date, '-', 1) -- в данном примере функция извлечет первый элемент date по разделителю '-' 
+-- Н-р из даты 2026-01-23 вернет 2026
+---
+
+---
+
+```
 3. типы данных DATE, TIMESTAMP
 4. COALESCE
 5. конструкция CASE - WHEN
