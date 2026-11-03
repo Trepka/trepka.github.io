@@ -6,9 +6,9 @@ title: "Data journey"
 
 ## 📚 Оглавление
 
-- **[SQL](_site/sql.html)**: Реляционные базы данных на примере PostgreSQL.
-- **[Pandas](_site/pandas.html)**: Очистка, преобразование и анализ данных с помощью Pandas.
-- **[Statistic](_site/statistic.html)**: Основы статистики.
+- **[SQL](sql.html)**: Реляционные базы данных на примере PostgreSQL.
+- **[Pandas](pandas.html)**: Очистка, преобразование и анализ данных с помощью Pandas.
+- **[Statistic](statistic.html)**: Основы статистики.
 
 ---
 
