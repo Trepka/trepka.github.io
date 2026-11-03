@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "pandas.html",
-    "href": "pandas.html",
-    "title": "Pandas",
-    "section": "",
-    "text": "Основы Pandas для аналитики данных"
-  },
-  {
     "objectID": "statistic.html",
     "href": "statistic.html",
     "title": "Statistic",
@@ -14,10 +7,31 @@
     "text": "Основы статистики"
   },
   {
+    "objectID": "pandas.html",
+    "href": "pandas.html",
+    "title": "Pandas",
+    "section": "",
+    "text": "Основы Pandas для аналитики данных\n\n\nCode\nimport pandas as pd\nimport matplotlib.pyplot as plt\n\ncustomer = pd.read_csv('data/Customer.csv', delimiter='\\t')\n\ncustomer.head(5)\n\n\n\n\n\n\n\n\n\n1\nUnnamed: 1\n934\n1.1\nAW00000001\n3F5AE95E-B87D-4AED-95B4-C3797AFCB74F\n2025-09-11 11:15:07.263\n\n\n\n\n0\n2\nNaN\n1028.0\n1\nAW00000002\nE552F657-A9AF-4A7D-A645-C429D6E02491\n2025-09-11 11:15:07.263\n\n\n1\n3\nNaN\n642.0\n4\nAW00000003\n130774B1-DB21-4EF3-98C8-C104BCD6ED6D\n2025-09-11 11:15:07.263\n\n\n2\n4\nNaN\n932.0\n4\nAW00000004\nFF862851-1DAA-4044-BE7C-3E85583C054D\n2025-09-11 11:15:07.263\n\n\n3\n5\nNaN\n1026.0\n4\nAW00000005\n83905BDC-6F5E-4F71-B162-C98DA069F38A\n2025-09-11 11:15:07.263\n\n\n4\n6\nNaN\n644.0\n4\nAW00000006\n1A92DF88-BFA2-467D-BD54-FCB9E647FDD7\n2025-09-11 11:15:07.263"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Data journey",
+    "section": "",
+    "text": "Этот сайт является моей собственной базой знаний, основанной на бесплатных ресурсах на пути к аналитике данных."
+  },
+  {
+    "objectID": "index.html#оглавление",
+    "href": "index.html#оглавление",
+    "title": "Data journey",
+    "section": "📚 Оглавление",
+    "text": "📚 Оглавление\n\nSQL: Реляционные базы данных на примере PostgreSQL.\nPandas: Очистка, преобразование и анализ данных с помощью Pandas.\nStatistic: Основы статистики.\n\n\n\n🚀 Цели"
+  },
+  {
     "objectID": "sql.html",
     "href": "sql.html",
-    "title": "Реляционные базы данных",
+    "title": "SQL на примере Postgres",
     "section": "",
-    "text": "Реляционные базы данных\nНа этой странице опубликована необходимая база по БД с примерами кода.\nЛогические блоки этой страницы будут продублированы на странице pandas, для лучшего усвоения.\nДля практики написания запросов я использовал этот репозиторий.\n\nПорядок выполнения запроса\n\n\nБазовые запросы\n\nCортировка результата нисходящая/восходящая\n\nSELECT col\nFROM t\nORDER BY col ASC --DESC\n\nФункции (LENGTH, UPPER, SPLIT_PART, приведение типов CAST, CONCAT, DATE_PART, ROUND)\n\nSELECT LENGTH('simple text') -- вернет 11\n---\nSELECT UPPER('text') -- вернет TEXT\n---\nSELECT SPLIT_PART(date, '-', 1) -- в данном примере функция извлечет первый элемент date по разделителю '-' \n-- Н-р из даты 2026-01-23 вернет 2026\n\nтипы данных DATE, TIMESTAMP\nCOALESCE\nконструкция CASE - WHEN\n\n\n\nФильтрация данных\n\nWHERE, LIKE/NOT LIKE\nфильтрация по числовым/текстовым значениям, датам\nIN/NOT IN, BETWEEN/NOT BETWEEN\nIS NULL/ IS NOT NULL\n\n\n\nАгрегация\n\nDISTINCT (сочетание с агрегирующими функциями)\nCOUNT (в случае колонки возвращает количество НЕ NULL значений), SUM, AVG, MAX, MIN\narray_length(массив, размерность)\nв качестве аргумента агрегирующей функции могут быть другие функции либо расчетные колонки (Н-р: AVG(column1 + column2), либо условие CASE)\nAGE\nагрегатные выражения с фильтрацией (такая запись позволяет проводить расчеты без промежуточных запросов с условиями в блоке WHERE)\n\nSELECT agg_function(column) FILTER (WHERE condition)\nFROM table\n\n\nГруппировка данных\n\nGROUP BY"
+    "text": "На этой странице опубликована необходимая база по БД с примерами кода.\nЛогические блоки этой страницы будут продублированы на странице pandas, для лучшего усвоения.\nДля практики написания запросов я использовал этот репозиторий.\n\nПорядок выполнения запроса\n\n\nБазовые запросы\n\nCортировка результата нисходящая/восходящая\n\nSELECT col\nFROM t\nORDER BY col ASC --DESC\n\nФункции (LENGTH, UPPER, SPLIT_PART, приведение типов CAST, CONCAT, DATE_PART, ROUND)\n\nSELECT LENGTH('simple text') -- вернет 11\n---\nSELECT UPPER('text') -- вернет TEXT\n---\nSELECT SPLIT_PART(date, '-', 1) -- в данном примере функция извлечет первый элемент date по разделителю '-' \n-- Н-р из даты 2026-01-23 вернет 2026\n\nтипы данных DATE, TIMESTAMP\nCOALESCE\nконструкция CASE - WHEN\n\n\n\nФильтрация данных\n\nWHERE, LIKE/NOT LIKE\nфильтрация по числовым/текстовым значениям, датам\nIN/NOT IN, BETWEEN/NOT BETWEEN\nIS NULL/ IS NOT NULL\n\n\n\nАгрегация\n\nDISTINCT (сочетание с агрегирующими функциями)\nCOUNT (в случае колонки возвращает количество НЕ NULL значений), SUM, AVG, MAX, MIN\narray_length(массив, размерность)\nв качестве аргумента агрегирующей функции могут быть другие функции либо расчетные колонки (Н-р: AVG(column1 + column2), либо условие CASE)\nAGE\nагрегатные выражения с фильтрацией (такая запись позволяет проводить расчеты без промежуточных запросов с условиями в блоке WHERE)\n\nSELECT agg_function(column) FILTER (WHERE condition)\nFROM table\n\n\nГруппировка данных\n\nGROUP BY"
   }
 ]
