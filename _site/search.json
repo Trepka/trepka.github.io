@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "pandas.html",
+    "href": "pandas.html",
+    "title": "Pandas",
+    "section": "",
+    "text": "Основы Pandas для аналитики данных"
+  },
+  {
+    "objectID": "statistic.html",
+    "href": "statistic.html",
+    "title": "Statistic",
+    "section": "",
+    "text": "Основы статистики"
+  },
+  {
+    "objectID": "sql.html",
+    "href": "sql.html",
+    "title": "Реляционные базы данных",
+    "section": "",
+    "text": "Реляционные базы данных\nНа этой странице опубликована необходимая база по БД с примерами кода.\nЛогические блоки этой страницы будут продублированы на странице pandas, для лучшего усвоения.\nДля практики написания запросов я использовал этот репозиторий.\n\nПорядок выполнения запроса\n\n\nБазовые запросы\n\nCортировка результата нисходящая/восходящая\n\nSELECT col\nFROM t\nORDER BY col ASC --DESC\n\nФункции (LENGTH, UPPER, SPLIT_PART, приведение типов CAST, CONCAT, DATE_PART, ROUND)\n\nSELECT LENGTH('simple text') -- вернет 11\n---\nSELECT UPPER('text') -- вернет TEXT\n---\nSELECT SPLIT_PART(date, '-', 1) -- в данном примере функция извлечет первый элемент date по разделителю '-' \n-- Н-р из даты 2026-01-23 вернет 2026\n\nтипы данных DATE, TIMESTAMP\nCOALESCE\nконструкция CASE - WHEN\n\n\n\nФильтрация данных\n\nWHERE, LIKE/NOT LIKE\nфильтрация по числовым/текстовым значениям, датам\nIN/NOT IN, BETWEEN/NOT BETWEEN\nIS NULL/ IS NOT NULL\n\n\n\nАгрегация\n\nDISTINCT (сочетание с агрегирующими функциями)\nCOUNT (в случае колонки возвращает количество НЕ NULL значений), SUM, AVG, MAX, MIN\narray_length(массив, размерность)\nв качестве аргумента агрегирующей функции могут быть другие функции либо расчетные колонки (Н-р: AVG(column1 + column2), либо условие CASE)\nAGE\nагрегатные выражения с фильтрацией (такая запись позволяет проводить расчеты без промежуточных запросов с условиями в блоке WHERE)\n\nSELECT agg_function(column) FILTER (WHERE condition)\nFROM table\n\n\nГруппировка данных\n\nGROUP BY"
+  }
+]

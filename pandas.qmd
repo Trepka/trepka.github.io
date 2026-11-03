@@ -1,0 +1,19 @@
+---
+title: "Pandas"
+format:
+  html:
+    code-fold: true
+jupyter: python3
+---
+
+# Основы Pandas для аналитики данных
+
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+
+customer = pd.read_csv('data/Customer.csv', delimiter='\t')
+
+customer.head(5)
+```
+

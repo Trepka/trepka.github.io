@@ -1,5 +1,6 @@
 project:
   type: website
+  output-dir: _site
 
 website:
   title: "Data Analysis Journey"
@@ -9,11 +10,11 @@ website:
         text: Home
       - href: sql.md
         text: SQL
-      - href: pandas.md
+      - href: pandas.qmd
         text: Pandas
 
 format:
   html:
-    theme: cosmo  # 'cosmo' is a very clean, minimalist theme
-    toc: true     # Adds a Table of Contents on the right side of long pages
-    code-copy: true # Adds a "copy to clipboard" button to code blocks
+    theme: cosmo 
+    toc: true     
+    code-copy: true

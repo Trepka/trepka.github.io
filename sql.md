@@ -1,12 +1,10 @@
 ---
-title: "Реляционные базы данных"
+title: "SQL на примере Postgres"
 ---
-
-# Реляционные базы данных
 
 На этой странице опубликована необходимая база по БД с примерами кода. \
 Логические блоки этой страницы будут продублированы на странице pandas, для лучшего усвоения. \
-Для практики написания запросов я использовал этот [репозиторий](https://github.com/lorint/AdventureWorks-for-Postgres). 
+Для практики написания запросов я использовал этот [репозиторий](https://github.com/lorint/AdventureWorks-for-Postgres).
 
 #### Порядок выполнения запроса
 
@@ -17,6 +15,7 @@ SELECT col
 FROM t
 ORDER BY col ASC --DESC
 ```
+
 2. Функции (LENGTH, UPPER, SPLIT_PART, приведение типов CAST, CONCAT, DATE_PART, ROUND)
 ```sql
 SELECT LENGTH('simple text') -- вернет 11
@@ -25,14 +24,14 @@ SELECT UPPER('text') -- вернет TEXT
 ---
 SELECT SPLIT_PART(date, '-', 1) -- в данном примере функция извлечет первый элемент date по разделителю '-' 
 -- Н-р из даты 2026-01-23 вернет 2026
----
-
----
-
 ```
+
 3. типы данных DATE, TIMESTAMP
+
 4. COALESCE
+
 5. конструкция CASE - WHEN
+
 
 #### Фильтрация данных
 1. WHERE, LIKE/NOT LIKE

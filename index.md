@@ -7,7 +7,7 @@ title: "Data journey"
 ## 📚 Оглавление
 
 - **[SQL](sql.md)**: Реляционные базы данных на примере PostgreSQL.
-- **[Pandas](pandas.md)**: Очистка, преобразование и анализ данных с помощью Pandas.
+- **[Pandas](pandas.qmd)**: Очистка, преобразование и анализ данных с помощью Pandas.
 - **[Statistic](statistic.md)**: Основы статистики.
  
 ---
